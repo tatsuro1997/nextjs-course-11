@@ -7,8 +7,8 @@ function PostsGrid(props) {
 
   return (
     <ul className={classes.grid}>
-      {posts.mao((post) => (
-        <PostItem />
+      {posts.map((post) => (
+        <PostItem key={post.slug} post={post} />
       ))}
     </ul>
   );
